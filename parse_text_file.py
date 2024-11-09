@@ -27,7 +27,7 @@ chunks = [filtered_lines[i:i + chunk_size] for i in range(0, len(filtered_lines)
 
 # Step 4: Save each chunk as a new text file inside the 'Sonicwall' folder
 for i, chunk in enumerate(chunks):
-    filename = chunk_{i + 1}.txt'  # Save files
+    filename = f'chunk_{i + 1}.txt'  # Save files
     with open(filename, 'w') as f:
         f.write('\n'.join(chunk))
 
